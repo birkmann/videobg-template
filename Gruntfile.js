@@ -37,16 +37,36 @@ module.exports = function(grunt) {
 
 		copy: {
 			dev: {
-				cwd: 'source/img/',
-				dest: 'build/img/',
-				expand: true,
-				src: ['**/*']
+				files: [
+					{
+						cwd: 'source/img/',
+						dest: 'build/img/',
+						expand: true,
+						src: ['**/*']
+					},
+					{
+						cwd: 'source/video/',
+						dest: 'build/video/',
+						expand: true,
+						src: ['**/*']
+					}
+				]
 			},
 			dist: {
-				cwd: 'source/img/',
-				dest: 'dist/img/',
-				expand: true,
-				src: ['**/*']
+				files: [
+					{
+						cwd: 'source/img/',
+						dest: 'dist/img/',
+						expand: true,
+						src: ['**/*']
+					},
+					{
+						cwd: 'source/video/',
+						dest: 'dist/video/',
+						expand: true,
+						src: ['**/*']
+					}
+				]
 			}
 		},
 
